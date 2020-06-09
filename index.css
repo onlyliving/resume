@@ -134,6 +134,7 @@ body{
     position: relative;
     margin-bottom: 16px;
     padding-left: 16px;
+    color:#888
 }
 .experience-list__item-box{
     position: relative;
@@ -150,6 +151,7 @@ body{
     border-radius: 50%;
 }
 .experience-box__head{
+    color:#333;
     /* font-weight: bold; */
 }
 
@@ -261,4 +263,35 @@ body{
     font-weight: bold;
     cursor: pointer;
     text-decoration: underline;
+}
+.experience-list__inner-box{
+    padding-left: 16px;
+    margin-bottom: 16px;
+    color:#888
+}
+.experience-list__inner-box:before{
+    content: '> 개인의 성장';
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+.list-note{
+    padding: 16px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+.list-note__head{
+    margin-bottom: 6px;
+    display: block;
+    font-size: 16px;
+}
+
+.list-note__list > li{
+    margin-bottom:2px;
+    color:#888
+}
+.list-note__list > li:last-child{
+    margin-bottom:0
 }
