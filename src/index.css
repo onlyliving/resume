@@ -44,19 +44,19 @@ body{
     margin: -1px 8px 0 0;
 }
 .info-list__email > a:before{
-    background: url('src/img/ico-email-64px.png') no-repeat center;
+    background: url('./img/ico-email-64px.png') no-repeat center;
     background-size: 16px auto;
 }
 .info-list__github > a:before{
-    background: url('src/img/ico-github-64px.png') no-repeat center;
+    background: url('./img/ico-github-64px.png') no-repeat center;
     background-size: 16px auto;
 }
 .info-list__notion > a:before{
-    background: url('src/img/ico-notion-64px.png') no-repeat center;
+    background: url('./img/ico-notion-64px.png') no-repeat center;
     background-size: 25px auto;
 }
 .info-list__insta > a:before{
-    background: url('src/img/ico-sns-insta-64px.png') no-repeat center;
+    background: url('./img/ico-sns-insta-64px.png') no-repeat center;
     background-size: 16px auto;
 }
 .info-list > li:last-child{
@@ -249,7 +249,7 @@ body{
     display: inline-block;
     margin: -3px 6px 0 0;
     vertical-align: middle;
-    background: url('src/img/ico-link-24px.png') no-repeat center;
+    background: url('./img/ico-link-24px.png') no-repeat center;
     background-size: 13px auto;
 }
 .link-list > li > a{
