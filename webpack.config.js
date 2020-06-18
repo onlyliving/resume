@@ -52,7 +52,15 @@ module.exports = {
           publicPath: './',
           limit: 100000,
         },
-      }
+      },
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //     },
+      //   ],
+      // }
     ],
   },
   plugins: [
