@@ -315,7 +315,7 @@ body{
         margin: 8px;
     }
     .fixed-box__scroll-box{
-        padding: 36px 8px 8px 24px;
+        padding: 36px 16px 16px 24px;
         overflow-y: auto;
         height: 100%;
     }
@@ -420,4 +420,19 @@ body{
 }
 .copyright{
     margin: 8px auto;
+}
+.txt-sub-title{
+    z-index: 1;
+    position: relative;
+    color: #000;
+}
+.txt-sub-title:before {
+    content: '';
+    z-index: -1;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFEB3B;
 }
