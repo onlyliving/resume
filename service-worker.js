@@ -1,12 +1,12 @@
 'use strict';
 
 // Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v11';
+const CACHE_NAME = 'static-cache-v12';
 
 // Add list of files to cache here
 const FILES_TO_CACHE = [
-    '/index.html',
-    '/offline.html',
+    '/resume/index.html',
+    '/resume/offline.html',
 ]
 
 self.addEventListener('install', (evt) => {
