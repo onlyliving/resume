@@ -1,7 +1,7 @@
 'use strict';
 
 // Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v10';
+const CACHE_NAME = 'static-cache-v11';
 
 // Add list of files to cache here
 const FILES_TO_CACHE = [
@@ -52,7 +52,10 @@ self.addEventListener('fetch', (evt) => {
               .catch(() => {
                 return caches.open(CACHE_NAME)
                     .then((cache) => {
-                      return cache.match('/resume/offline.html');
+                        console.log(cache);
+                        console.log(evt);
+                        console.log('캐치한다?');
+                      return cache.match(`${evt.request.url}/offline.html`);
                     });
               })
       );
