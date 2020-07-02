@@ -29082,7 +29082,16 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.side-project-list > li')[0].click();
     });
   }
-});
+}); // TODO : service worker
+// CODELAB: Register service worker.
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/service-worker.js').then(function (reg) {
+      console.log('Service worker registered.', reg);
+    });
+  });
+}
 
 /***/ }),
 
@@ -29241,4 +29250,4 @@ module.exports = __webpack_require__(/*! /Users/soheekim/Desktop/바탕
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.bundle.js.map?a8a90f0fafcef453a582
+//# sourceMappingURL=index.bundle.js.map?01dbfdf4e30c9309948a

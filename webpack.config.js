@@ -64,9 +64,10 @@ module.exports = {
     ],
   },
   plugins: [
+    // new ManifestPlugin(),
     new ManifestPlugin({
-      fileName: 'manifest.json',
-      basePath: __dirname,
+      fileName: 'webpackManifest.json',
+      // basePath: __dirname,
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/**.*.css', '**/**.*.css.map', '**/precache-manifest.*.js'],
@@ -103,5 +104,12 @@ module.exports = {
       './node_modules',
     ],
     extensions: ['.js', '.json', '.jsx', '.css'],
+  },
+  devServer: {
+      // contentBase: __dirname + "./",
+      // inline: true,
+      // hot: true,
+      host: "localhost",
+      port: 5500
   },
 };
