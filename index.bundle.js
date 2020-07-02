@@ -29119,7 +29119,7 @@ if (false) {} else {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(__dirname) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_TopInfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/TopInfo */ "./src/components/TopInfo.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -29599,12 +29599,12 @@ document.addEventListener('DOMContentLoaded', function () {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     // navigator.serviceWorker.register('/service-worker.js')
-    navigator.serviceWorker.register("".concat(path.resolve(__dirname, '/service-worker.js'))).then(function (reg) {
+    // navigator.serviceWorker.register(`${path.resolve(__dirname, '/service-worker.js')}`)
+    navigator.serviceWorker.register('/resume/service-worker.js').then(function (reg) {
       console.log('Service worker registered.', reg);
     });
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, "/"))
 
 /***/ }),
 
@@ -29763,4 +29763,4 @@ module.exports = __webpack_require__(/*! /Users/soheekim/Desktop/바탕
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.bundle.js.map?bfc40e0af4d5fde38264
+//# sourceMappingURL=index.bundle.js.map?c9986a27cf478f728b98
