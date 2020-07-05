@@ -459,17 +459,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// TODO : service worker
-// CODELAB: Register service worker.
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        // navigator.serviceWorker.register('/service-worker.js')
-
-        // navigator.serviceWorker.register(`${path.resolve(__dirname, '/service-worker.js')}`)
-        navigator.serviceWorker.register('/resume/service-worker.js')
-            .then((reg) => {
-            console.log('Service worker registered.', reg);
-            });
-    });
-}
-

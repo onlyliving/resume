@@ -29593,18 +29593,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.side-project-list > li')[0].click();
     });
   }
-}); // TODO : service worker
-// CODELAB: Register service worker.
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    // navigator.serviceWorker.register('/service-worker.js')
-    // navigator.serviceWorker.register(`${path.resolve(__dirname, '/service-worker.js')}`)
-    navigator.serviceWorker.register('/resume/service-worker.js').then(function (reg) {
-      console.log('Service worker registered.', reg);
-    });
-  });
-}
+});
 
 /***/ }),
 
@@ -29735,7 +29724,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_4__["default"], null), document.getElementById('root'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_4__["default"], null), document.getElementById('root')); // TODO : service worker
+// CODELAB: Register service worker.
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    var URLPATH = window.location.hostname === 'localhost' ? '/service-worker.js' : '/resume/service-worker.js'; // 저장소에 올릴 떄
+
+    navigator.serviceWorker.register(URLPATH).then(function (reg) {
+      console.log('%c Service worker registered.', 'color: sky', reg);
+    }).catch(function (err) {
+      console.log('%c Service worker registration failed : ', 'color: red', err);
+    });
+  });
+}
 
 /***/ }),
 
@@ -29763,4 +29765,4 @@ module.exports = __webpack_require__(/*! /Users/soheekim/Desktop/바탕
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.bundle.js.map?c9986a27cf478f728b98
+//# sourceMappingURL=index.bundle.js.map?a398f0c22e3da4ee03e2
