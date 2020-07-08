@@ -1,7 +1,7 @@
 'use strict';
 
 // Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v55';
+const CACHE_NAME = 'static-cache-v60';
 
 const URL_PATH_NAME = (location.hostname === 'localhost') ? '/' : '/resume/';
 // console.log(URL_PATH_NAME);
@@ -43,17 +43,17 @@ self.addEventListener('activate', (event) => {
     self.clients.claim();
 });
 
-
-// self.addEventListener('fetch', (event) => {
-//   console.log('👷', 'fetch', event);
-//   event.respondWith(fetch(event.request));
-// });
-
-
 self.addEventListener('fetch', event => {
     console.log(`>>> [ServiceWorker] fetch <<<`);
     const req = event.request;
     const url = new URL(req.url);
+
+    // if(!(event.request.url.indexOf('http') === 0)) return;
+    if(!(event.request.url.indexOf('http') === 0)) {
+      console.log('error? 에러 조건 걸기');
+      console.log(event.request.url);
+      return;
+    };
 
     if(url.origin === location.url){
         event.respondWith(cacheFirst(req));
@@ -61,7 +61,6 @@ self.addEventListener('fetch', event => {
         event.respondWith(newtorkFirst(req));
     }
 });
-
 
 // 캐시 자체에 있는 파일과 요청을 일치시키는 함수
 // 요청은 고유한 키(key)처럼 동작한다. 이 함수는 캐시에 아무 것도 없을 경우 undefined를 반환하거나 캐시 요청 자체를 반환한다.
@@ -86,18 +85,3 @@ async function newtorkFirst(req){
         return await cache.match(req);
     }
 }
-
-// self.addEventListener('fetch', (event) => {
-//     console.log('[ServiceWorker] Fetch -->', event.request.url);
-//     // fetch event handler here.
-//     event.respondWith(
-//         fetch(event.request)
-//             .catch(() => {
-//             return caches.open(CACHE_NAME)
-//                 .then((cache) => {
-//                     return cache.match(`/index.html`);
-//                 });
-//             })
-//     );
-
-// });
