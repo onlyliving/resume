@@ -249,8 +249,6 @@ class App extends Component {
                             </ul>
                         </article>
 
-                        
-
                         <article className="content-box content-box--side-project">
                             <h2 id="sideProjectHead" className="content-box__head"><span>Side Project</span></h2>
                             <ul className="side-project-list">
@@ -457,5 +455,40 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.side-project-list > li')[0].click();
         });
     }
+
+
+    const scrollEventCheck = targetTop => (targetTop <= window.innerHeight) ? true : false;
+    const mobildMediaQuery = window.matchMedia("(max-width: 767px)");
+    const mobileScrollEvent = (mediaValue) => {
+        if (mediaValue.matches) {
+
+            for (let i = 0; i < document.getElementsByClassName('content-box').length; i += 1) {
+                let targetTop = document.getElementsByClassName('content-box')[i].getBoundingClientRect().top;
+
+                if(!scrollEventCheck(targetTop)){
+                    document.getElementsByClassName('content-box')[i].classList.add('is-scroll-animation');
+                }
+            }
+            
+
+            window.addEventListener("scroll", () => {
+                for (let i = 0; i < document.getElementsByClassName('content-box').length; i += 1) {
+                    let targetTop = document.getElementsByClassName('content-box')[i].getBoundingClientRect().top;
+        
+                    if (scrollEventCheck(targetTop)) {
+                        document.getElementsByClassName('content-box')[i].classList.add('is-scroll-animation-show');
+        
+                    } else {
+                        document.getElementsByClassName('content-box')[i].classList.remove('is-scroll-animation-show');
+                    }
+                }
+            });
+            return true
+        }
+        return false;
+    }
+
+    mobileScrollEvent(mobildMediaQuery);
+    
 });
 

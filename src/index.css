@@ -436,3 +436,18 @@ body{
     bottom: 0;
     background: #FFEB3B;
 }
+/* .is-scroll-animation {
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+    opacity: 1;
+} */
+.is-scroll-animation{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all ease 0.5s;
+}
+.is-scroll-animation-show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all ease 0.5s;
+}
