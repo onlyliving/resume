@@ -386,109 +386,102 @@ class App extends Component {
                 </main>
             </div>
         )
-
     }
-
 }
 
 export default App;
 
+const menuToggleEvent = (targetEl) => {
+    const questionEl = targetEl;
 
+        for (let i = 0; i < questionEl.length; i += 1) {
+            targetEl[i].addEventListener('click', () => {
+    
+            for (let j = 0; j < questionEl.length; j += 1) {
+                questionEl[j].classList.remove('is-show');
+            }
+
+            let answerNum = 'a-' + questionEl[i].getAttribute('value').split('q-')[1];
+            let answerEl = document.querySelectorAll(`.table-box__a[value='${answerNum}']`)[0];
+    
+            if (answerEl.classList.contains('is-show')) {
+                return answerEl.classList.remove('is-show');
+            }
+    
+            return answerEl.classList.add('is-show');
+        });
+    }
+}
+
+const scrollEventCheck = targetTop => targetTop <= window.innerHeight;
+const mobildMediaQuery = window.matchMedia("(max-width: 767px)");
+
+const mobileScrollEvent = (mediaValue, targetEl) => {
+    if (!mediaValue.matches || !targetEl) {
+        return false;
+    }
+    
+    for (let i = 0; i < targetEl.length; i += 1) {
+        let targetTop = targetEl[i].getBoundingClientRect().top;
+
+        if(!scrollEventCheck(targetTop)){
+            targetEl[i].classList.add('is-scroll-animation');
+        }
+    }
+    
+    window.addEventListener("scroll", () => {
+        for (let i = 0; i < targetEl.length; i += 1) {
+            let targetTop = targetEl[i].getBoundingClientRect().top;
+
+            if (scrollEventCheck(targetTop)) {
+                targetEl[i].classList.add('is-scroll-animation-show');
+
+            } else {
+                targetEl[i].classList.remove('is-scroll-animation-show');
+            }
+        }
+    });
+
+    return true;
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('profileMoreBtn').addEventListener('click', function() {
+
+    document.getElementById('profileMoreBtn').addEventListener('click', (v) => {
         if (document.getElementById('profileEl').classList.contains('is-5-lines-only')) {
-            
-            // 숨김처리에서 -> 모두 보이게 하기
+
             document.getElementById('profileEl').classList.remove('is-5-lines-only');
             document.getElementById('profileMoreBtn').innerText = 'hide';
-    
+
         } else {
-    
-            // 모두 보이기 -> 숨김처리
             document.getElementById('profileEl').classList.add('is-5-lines-only');
             document.getElementById('profileMoreBtn').innerText = 'more';
         }
     });
-    
-    
-    for(let i = 0; i < document.getElementsByClassName('table-box__q').length; i += 1) {
-        document.getElementsByClassName('table-box__q')[i].addEventListener('click', function() {
-    
-            // 모두 닫기
-            for(let j = 0; j < document.getElementsByClassName('table-box__q').length; j += 1) {
-                document.querySelectorAll(`.table-box__q`)[j].classList.remove('is-show');
-            }
-    
-    
-            let targetNum = 'a-' + document.getElementsByClassName('table-box__q')[i].getAttribute('value').split('q-')[1];
-            console.log(`targetNum : ${targetNum}`);
-            console.log(document.querySelectorAll(`.table-box__a[value='${targetNum}']`)[0]);
-    
-            if (document.querySelectorAll(`.table-box__a[value='${targetNum}']`)[0].classList.contains('is-show')) {
-                // document.getElementsByClassName('table-box__q')[i].classList.remove('is-show');
-                return document.querySelectorAll(`.table-box__a[value='${targetNum}']`)[0].classList.remove('is-show');
-                // return document.querySelectorAll(`.table-box__a[value='${targetNum}']`)[0].style.display = "block";
-            }
-    
-            // document.getElementsByClassName('table-box__q')[i].classList.add('is-show');
-            return document.querySelectorAll(`.table-box__a[value='${targetNum}']`)[0].classList.add('is-show');
-            // return document.querySelectorAll(`.table-box__a[value='${targetNum}']`)[0].style.display = "none";
-            
-            
-        });
+
+    if( document.getElementsByClassName('table-box__q')) { 
+        menuToggleEvent(document.getElementsByClassName('table-box__q'));
     }
     
-    for (let i = 0; i < document.querySelectorAll('.side-project-list > li').length; i += 1) {
-        document.querySelectorAll('.side-project-list > li')[i].addEventListener('click', function() {
-            for (let j = 0; j < document.querySelectorAll('.side-project-list > li').length; j += 1) {
-                document.querySelectorAll('.side-project-list > li')[j].classList.remove('is-active');
-            }
-    
-            document.querySelectorAll('.side-project-list > li')[i].classList.add('is-active');
-    
-        });
+    if (document.querySelectorAll('.side-project-list > li')) {
+        for (let i = 0; i < document.querySelectorAll('.side-project-list > li').length; i += 1) {
+            document.querySelectorAll('.side-project-list > li')[i].addEventListener('click', () => {
+                for (let j = 0; j < document.querySelectorAll('.side-project-list > li').length; j += 1) {
+                    document.querySelectorAll('.side-project-list > li')[j].classList.remove('is-active');
+                }
+        
+                document.querySelectorAll('.side-project-list > li')[i].classList.add('is-active');
+            });
+        }
     }
     
     if (document.getElementById('sideProjectLinkText')) {
-        document.getElementById('sideProjectLinkText').addEventListener('click', function() {
+        document.getElementById('sideProjectLinkText').addEventListener('click', () => {
             document.querySelectorAll('.side-project-list > li')[0].click();
         });
     }
 
-
-    const scrollEventCheck = targetTop => (targetTop <= window.innerHeight) ? true : false;
-    const mobildMediaQuery = window.matchMedia("(max-width: 767px)");
-    const mobileScrollEvent = (mediaValue) => {
-        if (mediaValue.matches) {
-
-            for (let i = 0; i < document.getElementsByClassName('content-box').length; i += 1) {
-                let targetTop = document.getElementsByClassName('content-box')[i].getBoundingClientRect().top;
-
-                if(!scrollEventCheck(targetTop)){
-                    document.getElementsByClassName('content-box')[i].classList.add('is-scroll-animation');
-                }
-            }
-            
-
-            window.addEventListener("scroll", () => {
-                for (let i = 0; i < document.getElementsByClassName('content-box').length; i += 1) {
-                    let targetTop = document.getElementsByClassName('content-box')[i].getBoundingClientRect().top;
-        
-                    if (scrollEventCheck(targetTop)) {
-                        document.getElementsByClassName('content-box')[i].classList.add('is-scroll-animation-show');
-        
-                    } else {
-                        document.getElementsByClassName('content-box')[i].classList.remove('is-scroll-animation-show');
-                    }
-                }
-            });
-            return true
-        }
-        return false;
-    }
-
-    mobileScrollEvent(mobildMediaQuery);
+    mobileScrollEvent(mobildMediaQuery, document.querySelectorAll('li'));
     
 });
 
