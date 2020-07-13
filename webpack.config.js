@@ -14,6 +14,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     index: [path.resolve(__dirname, 'src/index.js')],
+    event: [path.resolve(__dirname, 'src/event.js')],
   },
   output: {
     path: path.resolve(__dirname, './'),
@@ -40,6 +41,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               plugins: () => [require('autoprefixer')],
+              esModule: true,
             },
           },
         ],
@@ -74,11 +76,12 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash].css',
+      chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
-      chunks: ['index']
+      // chunks: ['index']
     }),
   ],
   optimization: {
@@ -98,6 +101,9 @@ module.exports = {
       // css 압축
       new OptimizeCSSAssetsPlugin({}),
     ],
+    splitChunks: {
+      chunks: 'initial',
+    },
   },
   resolve: {
     modules: [

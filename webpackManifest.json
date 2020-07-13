@@ -1,6 +1,10 @@
 {
-  "index.css": "index.3dd3d5c631fe830a1b0d.css",
-  "index.js": "index.bundle.js?3dd3d5c631fe830a1b0d",
-  "index.js.map": "index.bundle.js.map?3dd3d5c631fe830a1b0d",
+  "event.js": "event.bundle.js?ed3b1142adc4dd84fc69",
+  "event.js.map": "event.bundle.js.map?ed3b1142adc4dd84fc69",
+  "index.css": "index.bf6cd38909723664b309.css",
+  "index.js": "index.bundle.js?bf6cd38909723664b309",
+  "index.js.map": "index.bundle.js.map?bf6cd38909723664b309",
+  "vendors.js": "vendors.bundle.js?5c19b96351a36be3cc2d",
+  "vendors.js.map": "vendors.bundle.js.map?5c19b96351a36be3cc2d",
   "index.html": "index.html"
 }
