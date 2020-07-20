@@ -1,10 +1,11 @@
 {
-  "event.js": "event.bundle.js?ed3b1142adc4dd84fc69",
-  "event.js.map": "event.bundle.js.map?ed3b1142adc4dd84fc69",
-  "index.css": "index.bf6cd38909723664b309.css",
-  "index.js": "index.bundle.js?bf6cd38909723664b309",
-  "index.js.map": "index.bundle.js.map?bf6cd38909723664b309",
-  "vendors.js": "vendors.bundle.js?5c19b96351a36be3cc2d",
-  "vendors.js.map": "vendors.bundle.js.map?5c19b96351a36be3cc2d",
+  "event.js": "event.bundle.js?d3bfa8d1011ba4b07966",
+  "event.js.map": "event.bundle.js.map?d3bfa8d1011ba4b07966",
+  "index.css": "index.8ac33dbd8866057faff5.css",
+  "index.js": "index.bundle.js?8ac33dbd8866057faff5",
+  "index.css.map": "index.8ac33dbd8866057faff5.css.map",
+  "index.js.map": "index.bundle.js.map?8ac33dbd8866057faff5",
+  "vendors~index.js": "vendors~index.bundle.js?039d8f106fe3a21f4275",
+  "vendors~index.js.map": "vendors~index.bundle.js.map?039d8f106fe3a21f4275",
   "index.html": "index.html"
 }
