@@ -9,7 +9,7 @@ const autoprefixer = require('autoprefixer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
   devtool: 'source-map',
   entry: {
@@ -96,6 +96,9 @@ module.exports = {
           mangle: {
             safari10: true,
           },
+          compress : {
+            drop_console: true
+          }
         },
       }),
       // css 압축
