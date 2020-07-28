@@ -33,7 +33,10 @@ class App extends Component {
                 {
                     company: '(주)휴마트컴퍼니',
                     position: '개발팀 - 프론트엔드 개발자',
-                    period: '2018.6 ~ 2019.12',
+                    period: {
+                        start: '2018-06',
+                        finish: '2019-12'
+                    },
                     link : 'https://trost.co.kr/',
                     skill : ['HTML5', 'CSS3', 'JavaScript', 'Webpack', 'Zeplin', 'GitLab', 'Trello', 'SourceTree', 'Postman', 'InteliJ', 'Visual Studio Code'],
                     workDetail : [
@@ -45,7 +48,10 @@ class App extends Component {
                 {
                     company: '(주)룸앤스페이스',
                     position: '개발팀 - 웹퍼블리셔',
-                    period: '2016.9 ~ 2018.5',
+                    period: {
+                        start: '2016-09',
+                        finish: '2018-05'
+                    },
                     link : 'https://roomnspace.co.kr/',
                     skill : ['HTML5', 'CSS3', 'jQuery', 'Javascript', 'Adobe photoshop', 'Adobe Illustrator'],
                     workDetail : [
@@ -56,7 +62,10 @@ class App extends Component {
                 {
                     company: '조경설계 이화원',
                     position: '설계팀 - 디자이너',
-                    period: '2011.3 ~ 2015.10',
+                    period: {
+                        start: '2011-03',
+                        finish: '2015-10'
+                    },
                     link : 'http://www.ehwawon.kr/2016_ehwawon.pdf',
                     skill : ['AutoCAD', 'SketchUp', 'Adobe photoshop', 'Adobe Illustrator'],
                     workDetail : [

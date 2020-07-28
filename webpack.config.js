@@ -96,9 +96,9 @@ module.exports = {
           mangle: {
             safari10: true,
           },
-          compress : {
-            drop_console: true
-          }
+          // compress : {
+          //   drop_console: true
+          // }
         },
       }),
       // css 압축

@@ -32,12 +32,12 @@ class Profile extends Component {
         });
 
         return (
-            <article id="profileEl" className="content-box content-box--profile is-5-lines-only">
+            <article id="profileEl" className="content-box content-box--profile">
                 <h2 className="content-box__head"><span>Profile</span></h2>
                 <div className="content-box__profile-txt">
                     {profileListItems}
                 </div>
-                <button type="button" id="profileMoreBtn" className="content-box__profile-more-btn">more</button>
+                {/* <button type="button" id="profileMoreBtn" className="content-box__profile-more-btn">more</button> */}
             </article>
         )
     }

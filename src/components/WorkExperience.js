@@ -10,14 +10,21 @@ class WorkExperience extends Component {
 
         /**
          * 
-         * @param {*} datePeriodStr 
-         * input ex) 2018.6 ~ 2019.12
+         * @param {*} periodObj 
+         * object
+         *  {
+         *      start: '2018-06',
+                finish: '2019-12'
+         *  }
          */
-        const datePeriod = (datePeriodStr) => {
+        const datePeriod = (periodObj) => {
+
+            const startDateStr = periodObj.start;
+            const lastDateStr = periodObj.finish;
+
             try {
-                let dateArr = datePeriodStr.split(' ~ ');
-                let startDate = new Date(dateArr[0]);
-                let lastDate = new Date(dateArr[1]);
+                let startDate = new Date(startDateStr);
+                let lastDate = new Date(lastDateStr);
                 let getYear = lastDate.getFullYear() - startDate.getFullYear();
                 let getMonth = lastDate.getMonth() - startDate.getMonth();
 
@@ -34,14 +41,24 @@ class WorkExperience extends Component {
             }
         };
 
-        const works = this.props.data;
+        const dateForm = str => (str.indexOf('-') !== -1) ? str.replace('-', '.') : str;
+        
+        /**
+         * 
+         * @param {*} periodObj 
+         * object
+         *  {
+         *      start: '2018-06',
+                finish: '2019-12'
+         *  }
+         */
+        const periodForm = periodObj => `${dateForm(periodObj.start)} ~ ${dateForm(periodObj.finish)}`;
 
         const skillItems = (skills) => {
             return skills.map((skill) => {
                 return <li key={skill}>{skill}</li>
             });
         };
-
 
         const workDetailItems = (workDetails) => {
             let num = 0;
@@ -63,6 +80,7 @@ class WorkExperience extends Component {
             });
         }
 
+        const works = this.props.data;
         let workNum = 0;
         const workItem = works.map((work) => {
             workNum ++;
@@ -70,7 +88,7 @@ class WorkExperience extends Component {
             return  <li key={workNum}>
                         <div className="experience-list__name"><span>{work.position}</span><a className="point-link" href={work.link} target="_blank" rel="noopener noreferrer">{work.company}</a></div>
                         <ul>
-                            <li className="experience-list__date">{work.period}, {datePeriod(work.period)}</li>
+                            <li className="experience-list__date">{periodForm(work.period)}, {datePeriod(work.period)}</li>
                             <li className="experience-list__item-box experience-box">
                                 <ul className="experience-box__item-list">
                                     {skillItems(work.skill)}

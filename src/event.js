@@ -54,17 +54,17 @@ const mobileScrollEvent = (mediaValue, targetEl) => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    document.getElementById('profileMoreBtn').addEventListener('click', (v) => {
-        if (document.getElementById('profileEl').classList.contains('is-5-lines-only')) {
+    // document.getElementById('profileMoreBtn').addEventListener('click', (v) => {
+    //     if (document.getElementById('profileEl').classList.contains('is-5-lines-only')) {
 
-            document.getElementById('profileEl').classList.remove('is-5-lines-only');
-            document.getElementById('profileMoreBtn').innerText = 'hide';
+    //         document.getElementById('profileEl').classList.remove('is-5-lines-only');
+    //         document.getElementById('profileMoreBtn').innerText = 'hide';
 
-        } else {
-            document.getElementById('profileEl').classList.add('is-5-lines-only');
-            document.getElementById('profileMoreBtn').innerText = 'more';
-        }
-    });
+    //     } else {
+    //         document.getElementById('profileEl').classList.add('is-5-lines-only');
+    //         document.getElementById('profileMoreBtn').innerText = 'more';
+    //     }
+    // });
 
     if( document.getElementsByClassName('table-box__q')) { 
         menuToggleEvent(document.getElementsByClassName('table-box__q'));
