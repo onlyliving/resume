@@ -19,6 +19,10 @@ class WorkExperience extends Component {
          */
         const datePeriod = (periodObj) => {
 
+            if (!periodObj || (!periodObj.start || !periodObj.finish)) {
+                return '';
+            }
+
             const startDateStr = periodObj.start;
             const lastDateStr = periodObj.finish;
 
@@ -41,7 +45,7 @@ class WorkExperience extends Component {
             }
         };
 
-        const dateForm = str => (str.indexOf('-') !== -1) ? str.replace('-', '.') : str;
+        const dateForm = str => (!str)? '재직중' : (str.indexOf('-') !== -1) ? str.replace('-', '.') : str;
         
         /**
          * 

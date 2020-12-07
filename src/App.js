@@ -16,20 +16,34 @@ class App extends Component {
             infoLink : [
                 {type: 'email', link: 'mailto:greensohee88@naver.com', desc: 'greensohee88@naver.com', display: 'on'},
                 {type: 'github', link: 'https://github.com/onlyliving/Side-Projects', desc: 'https://github.com/onlyliving', display: 'on'},
-                {type: 'notion', link: 'https://www.notion.so/14ef995b935e471abc9b3ab5be30196e', desc: '개발 블로그', display: 'on'},
+                {type: 'notion', link: 'https://www.notion.so/1f9b426c024d4490a00ac4956732519c', desc: '개발 블로그', display: 'on'},
                 {type: 'insta', link: 'https://www.instagram.com/soheegreen', desc: '인스타그램', display: 'on'},
                 {type: 'tistory', link: 'http://green-webdesigner.tistory.com/', desc: '티스토리', display: 'off'},
             ],
             profile : [
                 {
                     title: '어쩌다 개발자?',
-                    content: "(strong)let 김소희 = 조경설계 + 웹디자이너 + 웹퍼블리싱 + 웹 프론트엔드 개발;(@)저는 제가 자신 있는 것 하나(item)를 교집합 삼아 여기까지 왔습니다.(@)조경설계에서 웹퍼블리셔로 직군을 변경할 때는 '디자인'이 자신 있어서 할 수 있었고, 웹퍼블리셔에서 웹 프론트엔드 개발로 갈 때에는 '웹 퍼블리싱'을 기반으로 발전할 수 있게 되었습니다."}, 
+                    content: "(strong)let 김소희 = 조경설계 + 웹디자이너 + 웹퍼블리싱 + 웹 프론트엔드 개발;(@)저는 자신 있는 것 하나(item)를 교집합 삼아 여기까지 왔습니다.(@)조경설계에서 웹퍼블리셔로 직군을 변경할 때는 '디자인'이 자신 있어서 할 수 있었고, 웹퍼블리셔에서 웹 프론트엔드 개발로 갈 때에는 '웹 퍼블리싱'을 기반으로 발전할 수 있게 되었습니다."}, 
                 {
                     title:'웹 프론트엔드 개발자로서의 만족도는?',
-                    content: "기획과 디자인 의도대로 구현하는 것이 재미있습니다. 그리고 기획단에서 생각하지 못한 디테일을 체크해서, 같이 의견을 맞대어 더 나은 결과물로 발전될 때 더욱 보람을 느낍니다. 노력하는 만큼, 코드와 성과물로 고스란히 보이기 때문에 더욱 잘 해내고 싶습니다."
+                    content: "기획과 디자인 의도대로 구현하는 것이 재미있습니다. 그리고 기획단에서 생각하지 못한 디테일을 체크해서, 같이 의견을 맞대어 더 나은 결과물로 발전될 때 더욱 보람을 느낍니다. 노력하는 만큼, 코드와 성과물로 드러나기 때문에 더욱 잘 해내고 싶습니다."
                 }
             ],
             work: [
+                {
+                    company: '(주)인라이플',
+                    position: 'AI 상용 연구팀 - 프론트엔드 개발자',
+                    period: {
+                        start: '2020-08',
+                        finish: ''
+                    },
+                    link : '',
+                    skill : ['Python', 'HTML5', 'CSS3', 'JavaScript', 'GitHub', 'Pycharm'],
+                    workDetail : [
+                        {content: ['모델 분석을 위한 데이터 시각화 툴 개발', '모델 데모페이지 웹 개발']},
+                    ],
+                    effect: '연구 개발한 결과물에 대하여 의도한 방향대로 시연하기 위한 프론트단 작업을 주로 하였습니다. 연구 팀원들과 데이터를 구축하고, 연구에 대한 실험하는 과정을 함께 하면서 모든 것이 새롭고 좋은 경험이었습니다. 가상환경에 대한 필요성을 알게되었고, 플라스크(flask)를 통해서 백엔드 단을 다루었습니다.'
+                },
                 {
                     company: '(주)휴마트컴퍼니',
                     position: '개발팀 - 프론트엔드 개발자',
@@ -74,7 +88,7 @@ class App extends Component {
                     effect: '세상을 보는 시야가 넓어졌습니다. 길을 걷다가도 바닥 포장재와 패턴, 배수 형태, 어떤 조경수를 심었는지, 옥외 계단 구조물 등 설계가 머릿 속에 대략 그려집니다. 공간과 구조물, 시설물의 디테일을 보면 그 공간에 얼마나 노력이 들어갔는지 알 수 있습니다.'
                 },
             ],
-            TechnologyStack : ['HTML5 (5)', 'CSS3 (5)', 'JavaScript (4)', 'React.js (1)', 'Webpack (3)'],
+            TechnologyStack : ['HTML5 (5)', 'CSS3 (5)', 'JavaScript (4)', 'React.js (1)', 'Webpack (3)', 'Python (2)'],
             SideProject : [
                 {
                     head : '개인 사이드 프로젝트',
@@ -89,7 +103,7 @@ class App extends Component {
                     head : '프론트엔드 개발 노트',
                     period : '2019.01 ~',
                     linkList: [
-                        {title: '개발 노트(notion)', link: 'https://www.notion.so/14ef995b935e471abc9b3ab5be30196e'},
+                        {title: '개발 노트(notion)', link: 'https://www.notion.so/1f9b426c024d4490a00ac4956732519c'},
                     ],
                     desc: '그동안 개발 작업을 하면서 필요한 내용을 정리해 둔 개발 노트입니다. 경험한 것을 기록하고, 알아야 하는 모든 것을 기록하려고 합니다.'
                 },
