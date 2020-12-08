@@ -9,11 +9,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// TODO : service worker
 // CODELAB: Register service worker.
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-
     const URLPATH = (window.location.hostname === 'localhost') ? '/service-worker.js' : '/resume/service-worker.js';
 
     // 저장소에 올릴 떄

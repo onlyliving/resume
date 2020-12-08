@@ -31,6 +31,8 @@ self.addEventListener('activate', (event) => {
     // Remove previous cached data from disk.
     event.waitUntil(
       caches.keys().then((keyList) => {
+        console.log(`keyList : ${keyList}`);
+        console.log(`CACHE_NAME : ${CACHE_NAME}`)
         return Promise.all(keyList.map((key) => {
           if (key !== CACHE_NAME) {
             console.log(`%c [ServiceWorker] Remove old cache --> key : ${key}`, 'color:green');
