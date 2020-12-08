@@ -53,7 +53,8 @@
     "express": "^4.17.1",
     "express-http-to-https": "^1.1.4",
     "lodash": "^4.17.19",
-    "node-fetch": "^2.3.0",
+    "node-fetch": ">=2.6.1",
+    "node-forge": ">=0.10.0",
     "path": "^0.12.7",
     "react-devtools": "^4.6.0",
     "require": "^2.4.20"
