@@ -1,7 +1,7 @@
 'use strict';
 
 // Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v80';
+const CACHE_NAME = 'static-cache-v83';
 
 const URL_PATH_NAME = (location.hostname === 'localhost') ? '/' : '/resume/';
 // console.log(URL_PATH_NAME);
@@ -31,6 +31,8 @@ self.addEventListener('activate', (event) => {
     // Remove previous cached data from disk.
     event.waitUntil(
       caches.keys().then((keyList) => {
+        console.log(keyList);
+        console.log(CACHE_NAME)
         return Promise.all(keyList.map((key) => {
           if (key !== CACHE_NAME) {
             console.log('[ServiceWorker] Removing old cache -->', key);
