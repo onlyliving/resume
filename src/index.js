@@ -10,17 +10,29 @@ ReactDOM.render(
 );
 
 // CODELAB: Register service worker.
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    const URLPATH = (window.location.hostname === 'localhost') ? '/service-worker.js' : '/resume/service-worker.js';
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', () => {
+//     const URLPATH = (window.location.hostname === 'localhost') ? '/service-worker.js' : '/resume/service-worker.js';
 
-    // 저장소에 올릴 떄
-    navigator.serviceWorker.register(URLPATH)
-        .then((reg) => {
-        console.log('%c Service worker registered.', 'color: sky', reg);
-        })
-        .catch(function(err){
-        console.log('%c Service worker registration failed : ', 'color: red', err);
-        });
+//     // 저장소에 올릴 떄
+//     navigator.serviceWorker.register(URLPATH)
+//         .then((reg) => {
+//         console.log('%c Service worker registered.', 'color: sky', reg);
+//         })
+//         .catch(function(err){
+//         console.log('%c Service worker registration failed : ', 'color: red', err);
+//         });
+//   });
+// }
+
+
+if ('serviceWorker' in navigator) {
+  console.log('서비스워커가 존재한다.')
+  navigator.serviceWorker.getRegistrations().then(function (registrations) {
+    for (const registration of registrations) {
+      // unregister service worker
+      console.log('serviceWorker unregistered');
+      registration.unregister();
+    }
   });
 }
