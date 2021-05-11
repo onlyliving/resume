@@ -53,7 +53,7 @@
     "electron": ">=7.2.4",
     "express": "^4.17.1",
     "express-http-to-https": "^1.1.4",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "node-fetch": ">=2.6.1",
     "node-forge": ">=0.10.0",
     "path": "^0.12.7",
