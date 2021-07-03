@@ -9,7 +9,7 @@ const autoprefixer = require("autoprefixer");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-    mode: "prodection",
+    mode: "production",
     target: "web",
     devtool: "source-map",
     entry: {
