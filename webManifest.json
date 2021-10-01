@@ -21,7 +21,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "/resume/dist/index.html",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#8769f7",
