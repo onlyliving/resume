@@ -3,25 +3,25 @@
     "short_name": "김소희 이력서",
     "icons": [
         {
-            "src": "./src/img/touch/homescreen-48.png",
+            "src": "../src/img/touch/homescreen-48.png",
             "sizes": "48x48",
             "type": "image/webp"
         },
         {
-            "src": "./src/img/touch/homescreen-64.png",
+            "src": "../src/img/touch/homescreen-64.png",
             "sizes": "64x64",
             "type": "image/webp"
         },
         {
-            "src": "./src/img/touch/homescreen-192.png",
+            "src": "../src/img/touch/homescreen-192.png",
             "sizes": "192x192"
         },
         {
-            "src": "./src/img/touch/homescreen-512.png",
+            "src": "../src/img/touch/homescreen-512.png",
             "sizes": "512x512"
         }
     ],
-    "start_url": "/resume/dist/index.html",
+    "start_url": ".",
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#8769f7",
