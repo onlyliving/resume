@@ -1,7 +1,7 @@
 "use strict";
 
 // Update cache names any time any of the cached files change.
-const CACHE_NAME = "static-cache-v92";
+const CACHE_NAME = "static-cache-v93";
 
 const URL_PATH_NAME = location.hostname === "localhost" ? "/" : "/resume/";
 // console.log(URL_PATH_NAME);
