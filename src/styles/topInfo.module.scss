@@ -1,0 +1,41 @@
+.info-list > li{
+    margin-bottom:4px;
+}
+.info-list > li > a{
+    display: inline-block;
+    text-decoration: underline;
+}
+.info-list > li > a:before{
+    content:'';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: -1px 8px 0 0;
+}
+.info-list__email > a:before{
+    background: url("../assets/images/ico-email-64px.png") no-repeat center;
+    background-size: 16px auto;
+}
+.info-list__github > a:before{
+    background: url("../assets/images/ico-github-64px.png") no-repeat center;
+    background-size: 16px auto;
+}
+.info-list__notion > a:before{
+    background: url("../assets/images/ico-notion-64px.png") no-repeat center;
+    background-size: 25px auto;
+}
+.info-list__insta > a:before{
+    background: url("../assets/images/ico-sns-insta-64px.png") no-repeat center;
+    background-size: 16px auto;
+}
+
+.info-list__head {
+    display: block;
+    /* font-size: 12px; */
+    color:#7b7b7b
+}
+
+.info-list > li:last-child{
+    margin-right: 0
+}

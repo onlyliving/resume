@@ -1,0 +1,29 @@
+{
+    "name": "1김소희 웹프론트앤드 개발자 이력서",
+    "short_name": "1김소희 이력서",
+    "icons": [
+        {
+            "src": "homescreen-48.png",
+            "sizes": "48x48",
+            "type": "image/webp"
+        },
+        {
+            "src": "homescreen-64.png",
+            "sizes": "64x64",
+            "type": "image/webp"
+        },
+        {
+            "src": "homescreen-192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "homescreen-512.png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#8769f7",
+    "background_color": "#8769f7"
+}

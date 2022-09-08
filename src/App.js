@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TopInfo from "./components/TopInfo";
-import WorkExperience from "./components/WorkExperience";
+import Experiences from "./components/Experiences";
+import OtherExperiences from "./components/OtherExperiences";
 import TechnologyStack from "./components/TechnologyStack";
 import Profile from "./components/Profile";
 import SideProject from "./components/SideProject";
@@ -27,15 +28,15 @@ class App extends Component {
                 },
                 {
                     type: "github",
-                    link: "https://github.com/onlyliving/TIL",
-                    desc: "TIL(Today I Learned)",
+                    link: "https://github.com/onlyliving",
+                    desc: "https://github.com/onlyliving",
                     display: "on",
                 },
                 {
                     type: "insta",
                     link: "https://www.instagram.com/soheegreen",
                     desc: "인스타그램",
-                    display: "on",
+                    display: "off",
                 },
                 {
                     type: "tistory",
@@ -46,14 +47,14 @@ class App extends Component {
             ],
             profile: [
                 {
-                    title: "어쩌다 개발자?",
+                    title: "어쩌다 개발자?!!!",
                     content:
-                        "(strong)let 김소희 = 조경설계 + 웹디자이너 + 웹퍼블리싱 + 웹 프론트엔드 개발 + 웹 개발 확장 중;(@)저는 자신 있는 아이템을 교집합 삼아 여기까지 왔습니다.(@)조경설계에서 웹퍼블리셔로 직군을 변경할 때는 '디자인'이 자신 있어서 할 수 있었고, 웹퍼블리셔에서 웹 프론트엔드 개발로 전환할 때는 '웹 퍼블리싱'을 기반으로 발전할 수 있게 되었습니다.",
+                        "(strong)let 김소희 = 조경설계 + 웹디자이너 + 웹퍼블리싱 + 웹 프론트엔드 개발 + 웹 개발 확장 중;(@)저는 자신 있는 아이템을 교집합 삼아 여기까지 왔습니다.(@)조경설계에서 웹퍼블리셔로 직군을 변경할 때는 '디자인'이 자신 있어서 할 수 있었고, 웹퍼블리셔에서 웹 프론트엔드 개발로 전환할 때는 '웹 퍼블리싱'을 기반으로 발전할 수 있게 되었습니다.",
                 },
                 {
                     title: "웹 프론트엔드 개발자로서의 만족도는?",
                     content:
-                        "기획과 디자인 의도대로 구현하는 것이 재미있습니다. 그리고 기획단에서 생각하지 못한 디테일을 체크해서, 같이 의견을 맞대어 더 나은 결과물로 발전될 때 더욱 보람을 느낍니다. 노력하는 만큼, 코드와 성과물로 드러나기 때문에 더욱 잘 해내고 싶습니다.",
+                        "기획과 디자인 의도대로 구현하는 것이 재미있습니다. 그리고 기획단에서 생각하지 못한 디테일을 체크해서, 같이 의견을 맞대어 더 나은 결과물로 발전될 때 더욱 보람을 느낍니다. 노력하는 만큼, 코드와 성과물로 드러나기 때문에 더욱 잘 해내고 싶습니다. (note : 아래에 경험에 대한 건 좀 더 구체적으로 쓰기)",
                 },
             ],
             work: [
@@ -62,11 +63,15 @@ class App extends Component {
                     position: "개발팀 - 프론트엔드 개발자",
                     period: {
                         start: "2021-01",
-                        finish: "",
+                        finish: "2022-07",
                     },
                     link: "",
-                    skill: ["HTML5", "CSS3", "SCSS", "JavaScript", "React", "Gitlab"],
+                    skill: ["HTML5", "SCSS", "JavaScript", "TypeScript", "React", "Webpack", "Gitlab", "Visual Studio Code"],
                     workDetail: [
+                        {
+                            head: "인테리어 플랫폼 웹페이지 개발",
+                            content: ["회원가입, 로그인, 게시물 작성, 상세페이지, 서비스 목록, 검색 등 40여 페이지를 개발하였습니다. React, TypeScript를 적용하였습니다."],
+                        },
                         {
                             head: "사맛디 에디터 데모 웹 프론트 개발",
                             content: ["이미지만 업로드하면 쇼핑몰 상세페이지를 자동으로 업로드하는 기능에 필요한 데모페이지를 만들었습니다. 이미지와 캔버스(canvas)를 많이 다뤘습니다."],
@@ -82,7 +87,7 @@ class App extends Component {
                             content: ["이미지를 업로드해서 필요한 정보를 입력하고 검수 관리할 수 있는 페이지를 만들었습니다."],
                         },
                     ],
-                    effect: "쇼핑몰 상세페이지 에디터 툴 개발을 위해 입사하였습니다. 오픈소스를 이용하였고, 이 경험이 캔버스를 다루는 데 많은 도움이 되었습니다. Docker와 Gitlab CI/CD에 대하여 공부할 수 있는 시간을 가졌습니다. 웹 서버 구축에 대한 개념을 알아갈 수 있었습니다.",
+                    effect: "쇼핑몰 상세페이지 에디터 툴 개발을 위해 입사하였습니다. 오픈소스를 이용하였고, 이 경험이 캔버스를 다루는 데 많은 도움이 되었습니다. Docker와 Gitlab CI/CD에 대하여 공부할 수 있는 시간을 가졌습니다. 웹 서버 구축에 대한 개념을 알아갈 수 있었습니다. [인테리어 플랫폼 웹페이지 개발] 프로젝트에서 TypeScript를 처음 도입하면서 개발하는데 많은 도움을 받았습니다. 코드관리가 훨씬 수월해져서 TypeScript에 대한 필요성에 대해 알게 되었습니다.",
                 },
                 {
                     company: "(주)인라이플",
@@ -92,7 +97,7 @@ class App extends Component {
                         finish: "2020-12",
                     },
                     link: "",
-                    skill: ["Python", "HTML5", "CSS3", "JavaScript", "GitHub", "Pycharm"],
+                    skill: ["Python", "HTML5", "CSS3", "JavaScript", "GitHub", "Pycharm", "Visual Studio Code"],
                     workDetail: [
                         {
                             content: ["AI 모델 데모페이지 웹 프론트 개발 (데이터 시각화)"],
@@ -125,6 +130,8 @@ class App extends Component {
                     ],
                     effect: "데이터를 다루는 것을 알게 되었습니다. (서버 개발자와 API 요청과 응답에 대한 규칙 정하기, 언제 어떤 데이터를 불러와야 하는지 등) 웹앱에서 앱과의 통신하는 협업 과정도 기억에 크게 남습니다.",
                 },
+            ],
+            otherWork: [
                 {
                     company: "(주)룸앤스페이스",
                     position: "개발팀 - 웹퍼블리셔",
@@ -155,7 +162,7 @@ class App extends Component {
                     effect: "세상을 보는 시야가 넓어졌습니다. 길을 걷다가도 바닥 포장재와 패턴, 배수 형태, 어떤 조경수를 심었는지, 옥외 계단 구조물 등 설계가 머릿 속에 대략 그려집니다. 공간과 구조물, 시설물의 디테일을 보면 그 공간에 얼마나 노력이 들어갔는지 알 수 있습니다.",
                 },
             ],
-            TechnologyStack: ["HTML5 (5)", "CSS3 (5)", "JavaScript (4)", "React.js (1)", "Webpack (3)", "Python (2)"],
+            TechnologyStack: ["HTML5", "CSS3/SCSS", "JavaScript", "React.js", "TypeScript", "Webpack", "Python"],
             SideProject: [
                 {
                     head: "개인 사이드 프로젝트",
@@ -268,18 +275,15 @@ class App extends Component {
             <div>
                 <h1 className="hide-text">김소희의 이력서입니다.</h1>
 
-                <main>
-                    <div className="fixed-box">
-                        <div className="fixed-box__scroll-box">
-                            <TopInfo data={this.state.infoLink}></TopInfo>
-                            <TechnologyStack data={this.state.TechnologyStack}></TechnologyStack>
-                        </div>
-                    </div>
+                <main className="container">
+                    <TopInfo data={this.state.infoLink}></TopInfo>
+                    {/* <TechnologyStack data={this.state.TechnologyStack}></TechnologyStack> */}
                     <section className="contents-wrap">
-                        <Profile data={this.state.profile}></Profile>
-                        <WorkExperience data={this.state.work}></WorkExperience>
-                        <SideProject data={this.state.SideProject}></SideProject>
-                        <Qna data={this.state.qna}></Qna>
+                        {/* <Profile data={this.state.profile}></Profile> */}
+                        <Experiences data={this.state.work} />
+                        <OtherExperiences data={this.state.otherWork} />
+                        <SideProject data={this.state.SideProject} />
+                        <Qna data={this.state.qna} />
                         <p className="copyright">ⓒ sofie FE Resume</p>
                     </section>
                 </main>

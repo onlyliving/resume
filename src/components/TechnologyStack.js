@@ -1,32 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class TechnologyStack extends Component {
     render() {
-        console.log(`%c ==> TechnologyStack render`, 'color:magenta');
-
-        let skillArr = [];
-        let skillName = '';
-        let skillScore = '';
-        let skillClassName = '';
+        console.log(`%c ==> TechnologyStack render`, "color:magenta");
 
         const mainSkills = this.props.data;
-        const listItems = mainSkills.map((skill) => {
-            skillArr = skill.split(' ');
-            skillName = skillArr[0];
-            skillScore = skillArr[1].replace('(', '').replace(')', '');
-            skillClassName = `is-graph is-graph-${skillScore}`;
-
-            return <li key={skillName}><span>{skillName}</span><div className={skillClassName}></div></li>
-        });
+        const innerText = mainSkills.join(", ");
 
         return (
             <article className="content-box content-box--skills">
-                <h2 className="content-box__head"><span>Technology Stack</span></h2>
+                <h2 className="content-box__head">
+                    <span>Web Technologies</span>
+                </h2>
                 <ul className="content-box__skill-list">
-                    {listItems}
+                    <li>{innerText}...</li>
                 </ul>
             </article>
-        )
+        );
     }
 }
 
