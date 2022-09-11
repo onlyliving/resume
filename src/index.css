@@ -27,6 +27,9 @@ body{
 
 .title-strong {
     position: relative;
+    min-width: 14px;
+    display: inline-block;
+    vertical-align: bottom;
 }
 .title-strong:before {
     content: "";
@@ -35,7 +38,7 @@ body{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 11px;
+    bottom: 14px;
     background: #29fc29;
 }
 
@@ -49,11 +52,6 @@ body{
     font-size: 28px;
     font-weight: bold;
 }
-
-.sub-contents__txt {
-
-}
-
 .info-list {
     margin-top: 16px
 }
@@ -70,14 +68,6 @@ body{
 .info-list > li > a:hover {
     text-decoration: underline;
 }
-/* .info-list > li > a:before{
-    content:'';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin: -1px 8px 0 0;
-} */
 
 .info-list-head:before{
     content: "";
@@ -95,22 +85,6 @@ body{
     display: inline-block;
     margin-right: 4px;
 }
-/* .info-list--email > a:before{
-    background: url("./assets/images/ico-email-64px.png") no-repeat center;
-    background-size: auto 16px;
-}
-.info-list--github > a:before{
-    background: url("./assets/images/ico-github-64px.png") no-repeat center;
-    background-size: 16px auto;
-}
-.info-list--notion > a:before{
-    background: url("./assets/images/ico-notion-64px.png") no-repeat center;
-    background-size: 25px auto;
-}
-.info-list--insta > a:before{
-    background: url("./assets/images/ico-sns-insta-64px.png") no-repeat center;
-    background-size: 16px auto;
-} */
 .info-list > li:last-child{
     margin-right: 0
 }
@@ -242,11 +216,10 @@ body{
     margin-bottom: 16px;
     padding: 16px;
     border-radius: 4px;
-    box-shadow: 0 0.2px 8px rgba(0,0,0,0.08);
     border: 1px solid #e0e0e0;
 }
 .side-project-list > li.is-active{
-    box-shadow: 0 0.2px 15px #cdbfff;
+    border: 2px solid #29fc29;
 }
 .side-project-list__head{
     display: inline-block;
@@ -381,4 +354,27 @@ body{
     content:'-';
     position: absolute;
     left:0
+}
+
+@media(max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+    .header-top-name {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .title-strong:before{
+        bottom: 7px;
+    }
+    .content-box__intro {
+        font-size: 26px;
+    }
+    .content-box__head {
+        font-size: 36px;
+    }
+    .sub-contents__head {
+        font-size: 24px;
+    }
 }

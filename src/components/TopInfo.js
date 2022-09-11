@@ -28,7 +28,7 @@ class TopInfo extends Component {
             }
         });
 
-        const title = "디자인을 좋아하는 개발자, 김소희입니다.";
+        const title = "디자인을 좋아하는 개발자,김소희입니다.";
         const wordArr = title.split("");
         const titleElements = wordArr.map((item) => {
             if (item === ",") {
