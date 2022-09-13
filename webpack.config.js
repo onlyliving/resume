@@ -72,11 +72,7 @@ module.exports = {
             // basePath: __dirname,
         }),
         new CleanWebpackPlugin({
-            cleanOnceBeforeBuildPatterns: [
-                "**/**.*.css",
-                "**/**.*.css.map",
-                "**/precache-manifest.*.js",
-            ],
+            cleanOnceBeforeBuildPatterns: ["**/**.*.css", "**/**.*.css.map", "**/precache-manifest.*.js"],
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[chunkhash].css",
@@ -100,9 +96,9 @@ module.exports = {
                     mangle: {
                         safari10: true,
                     },
-                    // compress : {
-                    //   drop_console: true
-                    // }
+                    compress: {
+                        drop_console: true,
+                    },
                 },
             }),
             // css 압축
