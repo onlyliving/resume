@@ -52,7 +52,7 @@ class TopInfo extends Component {
                 <ul className="info-list">{listItems}</ul>
                 <div className="sub-contents">
                     <h3 className="sub-contents__head">Web Technologies</h3>
-                    <p className="sub-contents__txt">HTML5, CSS3/SCSS, JavaScript, React.js, TypeScript, Webpack, Python</p>
+                    <p className="sub-contents__txt">HTML5, CSS3/SCSS, JavaScript, TypeScript, React.js, Webpack</p>
                 </div>
             </article>
         );
