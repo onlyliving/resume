@@ -66,7 +66,7 @@ class App extends Component {
                         finish: "2022-07",
                     },
                     link: "",
-                    skill: ["HTML5", "SCSS", "JavaScript", "TypeScript", "React", "Webpack", "Docker", "Zeplin", "Gitlab", "Visual Studio Code"],
+                    skill: ["HTML5", "SCSS", "JavaScript", "TypeScript", "ReactJS", "Webpack", "Docker", "Zeplin", "Gitlab", "Visual Studio Code"],
                     workDetail: [
                         {
                             head: "인테리어 플랫폼 웹페이지 개발",
@@ -158,7 +158,7 @@ class App extends Component {
                         finish: "2018-05",
                     },
                     link: "https://roomnspace.co.kr/",
-                    skill: ["HTML5", "CSS3", "jQuery", "Javascript", "Adobe photoshop", "Adobe Illustrator"],
+                    skill: ["HTML5", "CSS3", "jQuery", "JavaScript", "Adobe photoshop", "Adobe Illustrator"],
                     workDetail: [
                         {
                             head: "룸앤스페이스 서비스 (PC, Mobile Web)",
@@ -186,7 +186,7 @@ class App extends Component {
                     effect: "세상을 보는 시야가 넓어졌습니다. 길을 걷다가도 바닥 포장재와 패턴, 배수 형태, 어떤 조경수를 심었는지, 옥외 계단 구조물 등 설계가 머릿속에 대략 그려집니다. 공간과 구조물, 시설물의 디테일을 보면 그 공간에 얼마나 노력이 들어갔는지 알 수 있습니다.",
                 },
             ],
-            TechnologyStack: ["HTML5", "CSS3/SCSS", "JavaScript", "React.js", "TypeScript", "Webpack", "Python"],
+            TechnologyStack: ["HTML5", "CSS3/SCSS", "JavaScript", "ReactJS", "TypeScript", "Webpack", "Python"],
             SideProject: [
                 {
                     head: "개인 사이드 프로젝트",
@@ -245,7 +245,7 @@ class App extends Component {
             qna: [
                 {
                     question: "업무상 강점은 무엇인가요?",
-                    answer: "UI/UX 디자인을 작업했던 경험이 있기 때문에, UI/UX에 대한 감각이 있습니다. 그래서 기획/디자인팀과 업무 커뮤니케이션이 원만합니다. 필요하면 간단한 디자인은 제가 할 수도 있습니다.<br/>웹페이지 퍼블리싱 작업의 구현 속도가 빠릅니다.<br/>일에 대한 책임감이 있습니다. 정해진 시간 내에 맡은 업무를 잘 수행하기 위해 노력하고, 갑작스러운 버그나 이슈가 생기면 적극적으로 나섭니다.",
+                    answer: `저의 특장점은 디자인에 대한 이해력입니다.<br/>UI/UX 디자인을 작업했던 경험이 있기 때문에, UI/UX에 대한 감각이 있습니다. 그래서 기획/디자인팀과 업무 커뮤니케이션이 원만합니다.`,
                 },
                 {
                     question: "웹 개발에서 버그 이슈가 생겼을 경우 어떻게 대처하나요?",
